@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/relativeLayout"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorToolBar"
+        android:minHeight="?attr/actionBarSize">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/backIconMarginStart"
+            android:src="@drawable/ic_arrow_back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/toolBarTitleMarginStart"
+            android:text="@string/authorization"
+            android:textColor="@color/colorAuthorization"
+            android:textSize="@dimen/toolBarTitleSize" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/createMarginStart"
+            android:layout_marginEnd="@dimen/createMarginEnd"
+            android:text="@string/create"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorCreate"
+            android:textSize="@dimen/createTextSize" />
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_bar">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolBarShadow"
+            android:background="@drawable/toolbar_shadow" />
+
+    </FrameLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart"
+        android:layout_marginTop="@dimen/emailTextInputLayoutMarginTop"
+        android:layout_marginEnd="@dimen/marginEnd"
+        android:theme="@style/TextLabel">
+        <EditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/brownishGray"
+            android:hint="@string/email_hint"
+            android:inputType="text"
+            android:singleLine="true"
+            tools:ignore="TextFields,UnusedAttribute" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_input_layout_email"
+        android:layout_marginStart="@dimen/marginStart"
+        android:layout_marginTop="@dimen/passwordTextInputLayoutMarginTop"
+        android:layout_marginEnd="@dimen/marginEnd"
+        android:theme="@style/TextLabel">
+        <example.app.android.com.testapplication.utils.CustomEditText
+            android:id="@+id/et_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_input_layout_email"
+            android:drawableRight="@drawable/ic_password"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColorHint="@color/colorHint" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_input_layout_password"
+        android:layout_marginStart="@dimen/marginStart"
+        android:layout_marginTop="@dimen/sifnInMarginTop"
+        android:layout_marginEnd="@dimen/marginEnd"
+        android:background="@color/colorSignIn"
+        android:text="@string/signIn"
+        android:textColor="@color/colorSignInText"
+        android:textSize="@dimen/signInTextSize" />
+
+</RelativeLayout>

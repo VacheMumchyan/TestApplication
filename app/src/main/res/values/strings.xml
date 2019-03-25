@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TestApplication</string>
+    <string name="authorization">Авторизация</string>
+    <string name="create">создать</string>
+    <string name="email_hint">Электронная почта</string>
+    <string name="password">Пароль</string>
+    <string name="signIn">ВОЙТИ</string>
+    <string name="weatherTitle">Weather</string>
+    <string name="message">Пароль должен обязательно содержать минимум 1 строчную букву, 1 заглавную, и 1 цифру.</string>
+    <string name="аttention"><font fgcolor="#ffff0000">Внимание</font></string>
+    <string name="ok">OK</string>
+</resources>
